@@ -1,0 +1,17 @@
+# general
+BASE_DIR : '/home/royliu/Documents' ## the folder where this system locates
+USER_DB_PATH : '../db/user.json'  ## path where user.json locates
+user_id : '000002'
+host_ip : '127.0.0.1'
+port : 8000
+
+llm:
+  model: 'qwen-plus-latest'
+  temperature : 0.2
+  max_new_tokens : 512
+
+vect:
+  embedding_model : "/home/royliu/Documents/models/all-MiniLM-L6-v2"
+  score_threshold : 0.15
+  k : 2
+  maxsize : 256

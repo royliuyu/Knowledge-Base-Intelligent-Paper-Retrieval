@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base - Paper Retrival</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1>Knowledge Base - Paper Retrieval</h1>
+
+    <div class="container">
+
+        <!-- Left Section: File List -->
+        <div class="file-list-section">
+            <h2>Documents</h2>
+
+            <!-- Move the Select Button Above the Frame -->
+            <div class="file-input">
+                <!-- Hidden file input -->
+                <input type="file" id="folderInput" webkitdirectory directory multiple style="display: none;" />
+                <!-- Label to trigger the file input -->
+                <label for="folderInput" id="browseLabel">Select Folder</label>
+            </div>
+
+            <!-- File Frame -->
+            <div class="file-frame">
+                <!-- File List -->
+                <ul id="uploadedFilesList"></ul>
+            </div>
+
+            <!-- Folder Path and Summary Text Below the Frame -->
+            <div id="selectedFolderPath" class="selected-folder-path"></div>
+            <div id="summaryText" class="summary-text"></div>
+
+            <!-- File Preview Section -->
+            <div class="file-preview-section">
+                <h3>File Preview</h3>
+                <div id="filePreview" class="file-preview"></div>
+            </div>
+        </div>
+
+        <!-- Resizer (Draggable Bar) -->
+        <div class="resizer"></div>
+
+        <!-- Right Section: Chat Area -->
+        <div class="chat-section">
+            <div class="right-side-summary">
+                <h2 class="summary-title">Chat Area</h2>
+                <p class="summary-text">Raise your enquiry here.</p>
+            </div>
+            <div class="chat-session" id="chatSession"></div>
+            <div class="chat-input-container">
+                <textarea id="chatInput" class="chat-input" placeholder="Ask me..."></textarea>
+                <button id="chatSendButton" class="chat-send-button" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入 frontend.js -->
+    <script src="/static/js/frontend.js"></script>
+
+</body>
+</html>
