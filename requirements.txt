@@ -11,6 +11,7 @@ sentencepiece==0.2.0
 attrdict==2.0.1
 einops==0.8.0
 pypdf==5.3.0
+openai==1.68.2
 
 # for FastAPI
 fastapi==0.115.8
