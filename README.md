@@ -27,7 +27,7 @@
   cd knowledge_base
   conda create --name web python=3.10
   conda activate web
-  pip install -e .  
+  pip install -r requirements.txt
 - For embedding model,you canset in config.yaml
   - call huggingface's directly  
     ```
