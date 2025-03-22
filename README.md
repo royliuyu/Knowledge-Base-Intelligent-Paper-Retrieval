@@ -52,7 +52,10 @@
  - Llama: TODO
  - Note:  If run in PyCharm, need set API with QWEN_API_KEY and QWEN_BASE_URL via: 
      - Run -> Edit Configurations -> Environment Varialbles 
- 
+
+### Config path
+- setup BASE_DIR in config.yaml, it shall be be the folder where your pdf files will be imported from
+  
 ### Implement
 - Enter to this repository folder, enter to app foler
   ```
