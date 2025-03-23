@@ -14,7 +14,7 @@
 
 ### Prerequisites:
  - Python 3.10,  anaconda
- - PyTorch >=2.0.1
+ - PyTorch 2.5.1
  - Ubuntu 22.04/20.04
  - Your own API key of Qwen (minor change in infer.py to support DeepSeek/Gemini/Llama)
 
@@ -28,13 +28,14 @@
   conda create --name web python=3.10
   conda activate web
   pip install -r requirements.txt
+ 
 - For embedding model,you canset in config.yaml
   - call huggingface's directly  
     ```
      embedding_model : "all-MiniLM-L6-v2" 
     ```
   
-   - or, download and deploy locally
+   - or, download and deploy locally, via [huggingface: all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/tree/main)
 
     ``` 
      embedding_model : "/you_local_path/all-MiniLM-L6-v2"
@@ -54,8 +55,8 @@
      - Run -> Edit Configurations -> Environment Varialbles 
 
 ### Config path
-- setup BASE_DIR in config.yaml, it shall be be the folder where your pdf files will be imported from
-  
+- setup BASE_DIR in config.yaml, it shall be be the folder where this applicaiton locates
+
 ### Implement
 - Enter to this repository folder, enter to app foler
   ```
@@ -66,4 +67,3 @@
   uvicorn main:app --reload
    ```
 - visit 127.0.0.1:8000 in browser
-
